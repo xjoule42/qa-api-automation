@@ -3,9 +3,9 @@ from src.clients.base_client import BaseClient
 
 class JSONPlaceholderClient(BaseClient):
 
-    def get_posts(self):
+    def get_posts(self, params=None):
 
-        return self.get("/posts")
+        return self.get("/posts", params=params)
 
     def get_post(self, post_id):
 
