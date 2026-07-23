@@ -1,14 +1,12 @@
+from tests.fixtures.post_payloads import PATCH_POST
+
 def test_patch_post(client):
 
-    payload = {
-        "title": "Patched title"
-    }
-
-    response = client.patch_post(1, payload)
+    response = client.patch_post(1, PATCH_POST)
 
     assert response.status_code == 200
 
     data = response.json()
 
     assert data["id"] == 1
-    assert data["title"] == payload["title"]
+    assert data["title"] == PATCH_POST["title"]

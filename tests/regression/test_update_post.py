@@ -1,19 +1,14 @@
+from tests.fixtures.post_payloads import UPDATED_POST
+
 def test_update_post(client):
 
-    payload = {
-        "id": 1,
-        "title": "Updated title",
-        "body": "Updated body",
-        "userId": 1
-    }
-
-    response = client.update_post(1, payload)
+    response = client.update_post(1, UPDATED_POST)
 
     assert response.status_code == 200
 
     data = response.json()
 
     assert data["id"] == 1
-    assert data["title"] == payload["title"]
-    assert data["body"] == payload["body"]
-    assert data["userId"] == payload["userId"]
+    assert data["title"] == UPDATED_POST["title"]
+    assert data["body"] == UPDATED_POST["body"]
+    assert data["userId"] == UPDATED_POST["userId"]
