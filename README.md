@@ -2,7 +2,7 @@
 
 [![Python](https://img.shields.io/badge/Python-3.13-blue.svg)](https://www.python.org/)
 [![Pytest](https://img.shields.io/badge/Pytest-9.x-green.svg)](https://pytest.org/)
-[![GitHub Actions](https://github.com/<TU_USUARIO>/<TU_REPOSITORIO>/actions/workflows/api-tests.yml/badge.svg)](https://github.com/<TU_USUARIO>/<TU_REPOSITORIO>/actions)
+[![GitHub Actions](https://github.com/xjoule42/qa-api-automation/actions/workflows/api-tests.yml/badge.svg)](https://github.com/<TU_USUARIO>/<TU_REPOSITORIO>/actions)
 
 
 
