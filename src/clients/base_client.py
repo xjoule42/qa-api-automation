@@ -19,6 +19,27 @@ class BaseClient:
             "Content-Type": "application/json",
             "Accept": "application/json"
         })
+    
+    def set_headers(self, headers:dict):
+        """
+        Update session headers.
+        """
+        self.session.headers.update(headers)
+
+    def set_token(self, token: str):
+        """
+        Set Bearer authentication token
+        """
+        self.session.headers.update({
+            "Authorization": f"Bearer {token}"
+        })
+
+    def clear_token(self):
+        """
+        Remove Authorization header.
+        """
+        self.session.headers.pop("Authorization", None)
+
 
     def _log_request(self, method, url, params=None, payload=None):
         """Log outgoing HTTP request."""
